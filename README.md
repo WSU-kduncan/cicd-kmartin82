@@ -1,0 +1,14 @@
+- 1.)
+  - The host file for the proxy server needs two lines added to it so the so webserver1 and webserver2 are known as web1 and web2.
+    - 10.0.0.24 web1
+    - 10.0.0.26 web2
+  - For the web servers I also configured there host files replacing one web server with the proxy host.
+    - 10.0.0.25 proxy
+- 2.)
+  - To ssh between the systems you need to get the key you use for aws onto the servers because  that is the way ssh is verified. 
+  - I did this by using sftp to transfer the key from my local machine  to the proxy server using this command:
+    - sftp -i keyname.pem ubuntu@proxyipaddress
+  - Once this was done I used the put command to put the key on the proxy server. 
+  - Then on the proxy server I used the ssh command to connect to the web servers using there private ip and the key to verify. 
+- 3.)
+  - HAProxy is installed on the proxy server when it is created via the cloud formation script using the commands in the userdata section of script:
