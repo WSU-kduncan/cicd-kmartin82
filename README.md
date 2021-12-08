@@ -18,8 +18,5 @@
     - Then I ran the container using the command "$ docker run -dit --name test -p 8080:80 my-apache2" 
 - Part 2 
   - 1.) I created a public repo by clicking create new repo after creating a new free account. I named the repo project_6_repo
-  - 2.) Then I allowed authentication via CLI using doacker hub credentials by going to account settings -> security -> new access token
-  - 3.) Next I configured github sec
-
-- Part 3   
+  - 2.) Then I allowed authentication via CLI using doacker hub credentials by going to account settings -> security -> new access token 
 
